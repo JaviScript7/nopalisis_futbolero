@@ -14,7 +14,7 @@ para identificar agrupamientos de jugadores o patrones de movimiento en el campo
 Nopalisis_Futbolero/ <br>
 │                                  
 |-- 📂 data/                    <br>
-│   |-- match_data.csv          <br>
+│` `|-- match_data.csv          <br>
 │   |-- ...                     <br>
 │<br>
 |-- 📂 src/                     <br>
