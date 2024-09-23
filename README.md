@@ -13,24 +13,24 @@ para identificar agrupamientos de jugadores o patrones de movimiento en el campo
 
 Nopalisis_Futbolero/ <br>
 │                                  
-|-- 📂 data/                    <br>
-│` `|-- match_data.csv          <br>
-│   |-- ...                     <br>
+├-- 📂 data/                    <br>
+│   ├-- match_data.csv          <br>
+│   └-- ...                     <br>
 │<br>
-|-- 📂 src/                     <br>
-│   |-- 📂 algorithms/          <br>
-│   │   |-- dijkstra.py         <br>
-│   │   |-- a_star.py           <br>
+├-- 📂 src/                     <br>
+│   ├-- 📂 algorithms/          <br>
+│   │   ├-- dijkstra.py         <br>
+│   │   ├-- a_star.py           <br>
 │   │   └-- ...                 <br>
 │   │<br>
-│   |-- 📂 analisis/            <br>
-│   │   |-- data_processing.py  <br>
-│   │   |-- clustering.py       <br>
+│   ├-- 📂 analisis/            <br>
+│   │   ├-- data_processing.py  <br>
+│   │   ├-- clustering.py       <br>
 │   │   └-- visualization.py    <br>
 │   │<br>
-│   |-- app.py                  <br>
+│   ├-- app.py                  <br>
 │   └-- utils.py                <br>
 │
-|-- requirements.txt            <br>
-|-- README.md                   <br>
+├-- requirements.txt            <br>
+├-- README.md                   <br>
 └-- main.py                     <br>
