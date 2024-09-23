@@ -11,26 +11,26 @@ para identificar agrupamientos de jugadores o patrones de movimiento en el campo
 
 # Estructura del Proyecto
 
-Nopalisis_Futbolero/
+Nopalisis_Futbolero/ <br>
+│                           <br>        
+├── 📂 data/                    # Carpeta para almacenar datos<br>
+│   ├── match_data.csv          # Dataset de partidos<br>
+│   └── ...                     # Otros datasets si es necesario<br>
+│<br>
+├── 📂 src/                     # Código fuente del proyecto<br>
+│   ├── 📂 algorithms/          # Algoritmos (Dijkstra, A*, etc.)<br>
+│   │   ├── dijkstra.py         # Implementación de Dijkstra<br>
+│   │   ├── a_star.py           # Implementación de A*<br>
+│   │   └── ...                 # Otros algoritmos<br>
+│   │<br>
+│   ├── 📂 analisis/            # Análisis de datos<br>
+│   │   ├── data_processing.py  # Funciones para procesar datos<br>
+│   │   ├── clustering.py       # Clustering y análisis de patrones<br>
+│   │   └── visualization.py    # Funciones para visualización<br>
+│   │<br>
+│   ├── app.py                  # Archivo principal de Streamlit<br>
+│   └── utils.py                # Funciones utilitarias generales<br>
 │
-├── 📂 data/                   # Carpeta para almacenar datos
-│   ├── match_data.csv      # Dataset de partidos
-│   └── ...                 # Otros datasets si es necesario
-│
-├── 📂 src/                    # Código fuente del proyecto
-│   ├── 📂 algorithms/         # Algoritmos (Dijkstra, A*, etc.)
-│   │   ├── dijkstra.py     # Implementación de Dijkstra
-│   │   ├── a_star.py       # Implementación de A*
-│   │   └── ...             # Otros algoritmos
-│   │
-│   ├── 📂 analisis/           # Análisis de datos
-│   │   ├── data_processing.py  # Funciones para procesar datos
-│   │   ├── clustering.py    # Clustering y análisis de patrones
-│   │   └── visualization.py  # Funciones para visualización
-│   │
-│   ├── app.py              # Archivo principal de Streamlit
-│   └── utils.py            # Funciones utilitarias generales
-│
-├── requirements.txt        # Dependencias del proyecto
-├── README.md               # Documentación del proyecto
-└── main.py                 # Script para ejecutar el proyecto
+├── requirements.txt            # Dependencias del proyecto<br>
+├── README.md                   # Documentación del proyecto<br>
+└── main.py                     # Script para ejecutar el proyecto<br>
