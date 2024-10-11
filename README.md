@@ -10,27 +10,25 @@ Para este proyecto usaremos el algoritmo de Dijkstra en el análisis de fútbol.
 para identificar agrupamientos de jugadores o patrones de movimiento en el campo. Esto te ayudaría a ver las zonas del campo donde un equipo se concentra más o detectar formaciones y huecos.
 
 # Estructura del Proyecto
-
-Nopalisis_Futbolero/ <br>
-│                                  
-├-- 📂 data/                    <br>
-│   ├-- match_data.csv          <br>
-│   └-- ...                     <br>
-│<br>
-├-- 📂 src/                     <br>
-│   ├-- 📂 algorithms/          <br>
-│   │   ├-- dijkstra.py         <br>
-│   │   ├-- a_star.py           <br>
-│   │   └-- ...                 <br>
-│   │<br>
-│   ├-- 📂 analisis/            <br>
-│   │   ├-- data_processing.py  <br>
-│   │   ├-- clustering.py       <br>
-│   │   └-- visualization.py    <br>
-│   │<br>
-│   ├-- app.py                  <br>
-│   └-- utils.py                <br>
-│
-├-- requirements.txt            <br>
-├-- README.md                   <br>
-└-- main.py                     <br>
+<pre>
+Nopalisis_Futbolero/
+├── 📂 data/
+│   ├── data.json
+│   └── ...
+├── 📂 src/
+│   ├── 📂 algorithms/
+│   │   ├── dijkstra.py
+│   │   ├── a_star.py
+│   │   └── ...
+│   ├── 📂 analisis/
+│   │   ├── data_processing.py
+│   │   ├── clustering.py
+│   │   └── visualization.py
+│   ├── app.py
+│   └── utils.py
+├── requirements.txt
+├── Dockerfile
+├── docker-compose.yml
+├── README.md
+└── main.py
+</pre>
