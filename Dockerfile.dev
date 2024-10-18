@@ -13,9 +13,15 @@ RUN mkdir -p /home/app
 RUN apt-get update && apt-get install -y \
     build-essential \
     curl \
+    nano \
     software-properties-common \
     git \
     && rm -rf /var/lib/apt/lists/*
+
+#Modificar el bash
+RUN rm /root/.bashrc
+COPY .bashrc /root
+
 
 #Copiar los archivos la aplicacion
 COPY . /home/app
