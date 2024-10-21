@@ -3,41 +3,43 @@ Aquí implementaremos el algoritmo de Dijkstra utilizando coordenadas reales
 obtenidas de los eventos de pases de los datos de STATSBOMB.
 
 '''
-import numpy as np
-import pandas as pd
-import heapq
+import networkx as nx
+import random
 
-def dijkstra(graph, start):
-    # Inicializar distancias y prioridad
-    distances = {node: float('infinity') for node in graph}
-    distances[start] = 0
-    priority_queue = [(0, start)]
+# Función para sugerir jugadas usando Dijkstra
+def obtener_jugadas_sugeridas(posiciones):
+    # Crear un grafo basado en las posiciones de los jugadores
+    G = nx.Graph()
+
+    # Añadir nodos (jugadores)
+    for idx, pos in enumerate(posiciones):
+        G.add_node(idx + 1, pos=pos)
+
+    # Añadir aristas (pases posibles)
+    for i in range(len(posiciones)):
+        for j in range(len(posiciones)):
+            if i != j:
+                dist = ((posiciones[i][0] - posiciones[j][0])**2 + (posiciones[i][1] - posiciones[j][1])**2)**0.5
+                G.add_edge(i + 1, j + 1, weight=dist)
+
+    # Seleccionar aleatoriamente un jugador de origen y los destinos posibles
+    origen = 1
+    destinos = list(G.nodes())
+    destinos.remove(origen)
     
-    while priority_queue:
-        current_distance, current_node = heapq.heappop(priority_queue)
-
-        # Verificar si la distancia actual es mayor que la guardada
-        if current_distance > distances[current_node]:
-            continue
-
-        for neighbor, weight in graph[current_node].items():
-            distance = current_distance + weight
-
-            # Solo considerar este nuevo camino si es mejor
-            if distance < distances[neighbor]:
-                distances[neighbor] = distance
-                heapq.heappush(priority_queue, (distance, neighbor))
+    jugadas_sugeridas = []
     
-    return distances
+    for _ in range(3):
+        if not destinos:  # Verificar que hay destinos disponibles
+            break
+        
+        destino = random.choice(destinos)
+        
+        try:
+            path = nx.dijkstra_path(G, source=origen, target=destino)
+            jugadas_sugeridas.append(path)
+        except nx.NetworkXNoPath:
+            st.error(f"No hay camino disponible entre el jugador {origen} y el jugador {destino}.")
+            continue  # Si no hay camino, sigue a la siguiente iteración
 
-# Ejemplo de uso
-graph = {
-    'A': {'B': 1, 'C': 4},
-    'B': {'A': 1, 'C': 2, 'D': 5},
-    'C': {'A': 4, 'B': 2, 'D': 1},
-    'D': {'B': 5, 'C': 1}
-}
-
-start_node = 'A'
-distances = dijkstra(graph, start_node)
-print("Distancias desde el nodo de inicio:", distances)
+    return jugadas_sugeridas
