@@ -18,7 +18,6 @@ Nopalisis_Futbolero/
 ├── 📂 src/
 │   ├── 📂 algorithms/
 │   │   ├── dijkstra.py
-│   │   ├── a_star.py
 │   │   └── ...
 │   ├── 📂 analisis/
 │   │   ├── data_processing.py
