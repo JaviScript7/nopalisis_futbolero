@@ -7,7 +7,7 @@ Para este proyecto usaremos el algoritmo de Dijkstra en el análisis de fútbol.
 
 ## Análisis de Fútbol con Clustering con K-Means o DBSCAN
 
-para identificar agrupamientos de jugadores o patrones de movimiento en el campo. Esto te ayudaría a ver las zonas del campo donde un equipo se concentra más o detectar formaciones y huecos.
+La idea es poder implementar esta opcion para identificar agrupamientos de jugadores o patrones de movimiento en el campo. Esto te ayudaría a ver las zonas del campo donde un equipo se concentra más o detectar formaciones y huecos. Este proceso esta pendiente
 
 # Estructura del Proyecto
 <pre>
