@@ -31,3 +31,39 @@ Nopalisis_Futbolero/
 ├── README.md
 └── main.py
 </pre>
+
+ ## 🚀 Despegar APP con Docker
+
+ ### 🏗️ Vamos a construir el contenedor 📦
+
+ ### Paso 1: Clonar el repositorio
+
+```bash
+git clone https://github.com/JaviScript7/nopalisis_futbolero.git
+```
+
+### Paso 2: Navegar al directorio del proyecto
+```bash
+cd nopalisis_futbolero
+```
+### Paso 3: Ejecutar el contenedor Docker
+```bash
+docker-compose -f docker-compose.yml up -d --build 
+```
+### Paso 4: Verificar que los contenedores esten corriendo
+```bash
+docker ps 
+```
+### Paso 5: Verificar los logs 
+```bash
+docker logs <nombre del contenedor> 
+```
+### Paso 6: Si todo esta bien, abrir el navegador e ingresar la siguiente ruta 
+```bash
+http://localhost:8501/
+```
+### Paso 7: Para detener 
+```bash
+docker-compose -f docker-compose.yml down 
+```
+
